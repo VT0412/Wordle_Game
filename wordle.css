@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  gap: 5px;
+  margin: 20px auto;
+}
+.tile {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ddd;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.correct {
+  background-color: #6aaa64;
+  color: white;
+}
+
+.present {
+  background-color: #c9b45b;
+  color: white;
+}
+
+.absent {
+  background-color: #787c7e;
+  color: white;
+}
+
+.colorblind .correct {
+  background-color: orange;
+  color: white;
+}
+
+.colorblind .present {
+  background-color: blue;
+  color: white;
+}
+
+.colorblind .absent {
+  background-color: lightgrey;
+  color: black;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+}
+
+#keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: max-content;
+  margin: 20px auto;
+}
+
+.keyboard-row {
+  display: flex;
+  gap: 5px;
+}
+
+.key-tile {
+  padding: 10px;
+  border: 2px solid #ddd;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  min-width: 30px;
+  text-align: center;
+}
+
+.enter-key-tile {
+  flex: 1;
+}
